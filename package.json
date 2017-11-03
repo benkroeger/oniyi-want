@@ -1,0 +1,49 @@
+{
+  "name": "oniyi-wish",
+  "version": "1.0.0",
+  "description": "helpers to resolve / require modules in node.js",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "coverage": "nyc npm test && nyc report --reporter=html",
+    "format": "prettier-eslint --write \"lib/**/*.js\" \"test/**/*.js\"",
+    "prelint": "npm run format",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "ava --verbose",
+    "test:watch": "npm test -- --watch"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "eslint": "^4.10.0",
+    "eslint-config-oniyi": "^5.0.2",
+    "eslint-plugin-ava": "^4.2.2",
+    "nyc": "^11.3.0",
+    "prettier-eslint-cli": "^4.4.0"
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules/**",
+      "test/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benkroeger/oniyi-wish.git"
+  },
+  "keywords": [
+    "resolve",
+    "require",
+    "oniyi",
+    "safe-require",
+    "resolve-from"
+  ],
+  "author": "Benjamin Kroeger <benjamin.kroeger@gmail.com> (http://benjamin-kroeger.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benkroeger/oniyi-wish/issues"
+  },
+  "homepage": "https://github.com/benkroeger/oniyi-wish#readme"
+}
