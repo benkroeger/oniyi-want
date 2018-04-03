@@ -1,5 +1,5 @@
 {
-  "name": "oniyi-wish",
+  "name": "oniyi-want",
   "version": "1.0.0",
   "description": "helpers to resolve / require modules in node.js",
   "main": "lib/index.js",
