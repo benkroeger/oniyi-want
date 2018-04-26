@@ -29,7 +29,8 @@ test('resolves absolute module-id', (t) => {
 
 test('throws `MODULE_NOT_FOUND` error when silent and shutup options are false', (t) => {
   const options = { silent: false, shutup: false };
-  t.throws(() => resolve('does-not-exist', options));
+  const error = t.throws(() => resolve('does-not-exist', options), Error);
+  t.is(error.code, 'MODULE_NOT_FOUND');
 });
 
 test('hides `MODULE_NOT_FOUND` error when silent option is true', (t) => {

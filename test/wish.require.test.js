@@ -8,7 +8,8 @@ import wish from '../lib';
 
 test('throws `MODULE_NOT_FOUND` error when silent and shutup options are false', (t) => {
   const options = { silent: false, shutup: false };
-  t.throws(() => wish.require('does-not-exist', options));
+  const error = t.throws(() => wish.require('does-not-exist', options), Error);
+  t.is(error.code, 'MODULE_NOT_FOUND');
 });
 
 test('re-throws error from module-id when silent and shutup options are false', (t) => {
