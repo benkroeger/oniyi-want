@@ -27,14 +27,14 @@ test('resolves absolute module-id', (t) => {
   t.is(actual, expected);
 });
 
-test('throws `MODULE_NOT_FOUND` error when silent and shutup options are false', (t) => {
-  const options = { silent: false, shutup: false };
+test('throws `MODULE_NOT_FOUND` error when ignoreNotFoundError and ignoreAllErrors options are false', (t) => {
+  const options = { ignoreNotFoundError: false, ignoreAllErrors: false };
   const error = t.throws(() => resolve('does-not-exist', options), Error);
   t.is(error.code, 'MODULE_NOT_FOUND');
 });
 
-test('hides `MODULE_NOT_FOUND` error when silent option is true', (t) => {
-  const options = { silent: true };
+test('hides `MODULE_NOT_FOUND` error when ignoreNotFoundError option is true', (t) => {
+  const options = { ignoreNotFoundError: true };
   const actual = resolve('does-not-exist', options);
   const expected = undefined;
   t.is(actual, expected);
