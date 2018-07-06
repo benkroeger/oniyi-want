@@ -23,8 +23,9 @@
   },
   "nyc": {
     "exclude": [
-      "node_modules/**",
-      "test/**"
+      "**/*.test.js",
+      "test/**",
+      "node_modules/**"
     ]
   },
   "repository": {
