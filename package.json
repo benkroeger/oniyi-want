@@ -15,10 +15,10 @@
     "test:watch": "npm test -- --watch"
   },
   "devDependencies": {
-    "ava": "^0.23.0",
+    "ava": "0.25.0",
     "eslint": "^4.10.0",
     "eslint-config-oniyi": "^5.1.0",
-    "nyc": "^11.3.0",
+    "nyc": "12.0.2",
     "prettier-eslint-cli": "^4.4.0"
   },
   "nyc": {
